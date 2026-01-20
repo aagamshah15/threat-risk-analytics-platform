@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_kev
+    columns:
+      - name: cve_id
+        tests: [not_null]
+      - name: vendor_project
+        tests: [not_null]
+      - name: product
+        tests: [not_null]
+      - name: run_date
+        tests: [not_null]
+
+  - name: stg_urlhaus
+    columns:
+      - name: url
+        tests: [not_null]
+      - name: url_status
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["online", "offline", "unknown"]
+      - name: run_date
+        tests: [not_null]
+

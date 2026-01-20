@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: dim_vendor
+    columns:
+      - name: vendor_key
+        tests: [unique, not_null]
+      - name: vendor_project
+        tests: [unique, not_null]
+
+  - name: dim_product
+    columns:
+      - name: product_key
+        tests: [unique, not_null]
+      - name: vendor_key
+        tests: [not_null]
+      - name: vendor_project
+        tests: [not_null]
+      - name: product
+        tests: [not_null]
+
+  - name: dim_url
+    columns:
+      - name: url_key
+        tests: [unique, not_null]
+      - name: url
+        tests: [unique, not_null]
+
+  - name: fact_kev
+    columns:
+      - name: cve_id
+        tests: [not_null]
+      - name: date_day
+        tests: [not_null]
+
+  - name: fact_url_events
+    columns:
+      - name: url_key
+        tests: [not_null]
+      - name: date_day
+        tests: [not_null]
+
