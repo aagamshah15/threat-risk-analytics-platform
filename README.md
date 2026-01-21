@@ -83,3 +83,8 @@ All models include **dbt tests** (`not_null`, `unique`, `accepted_values`).
 cp .env.example .env
 make run
 
+
+## Roadmap
+- Phase 2: Streaming ingestion with Kafka
+- Phase 3: Orchestration with Airflow/Prefect
+- Phase 4: BI dashboards
