@@ -1,0 +1,16 @@
+version: 2
+
+models:
+  - name: fct_urlhaus_threat_events
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+          - unique
+      - name: ingested_at
+        tests:
+          - not_null
+      - name: url
+        tests:
+          - not_null
+

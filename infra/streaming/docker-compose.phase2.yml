@@ -1,0 +1,85 @@
+services:
+  redpanda:
+    image: redpandadata/redpanda:latest
+    container_name: redpanda
+    command:
+      - redpanda
+      - start
+      - --overprovisioned
+      - --smp
+      - "1"
+      - --memory
+      - "1G"
+      - --reserve-memory
+      - "0M"
+      - --node-id
+      - "0"
+      - --check=false
+      - --kafka-addr
+      - PLAINTEXT://0.0.0.0:9092
+      - --advertise-kafka-addr
+      - PLAINTEXT://redpanda:9092
+      - --pandaproxy-addr
+      - 0.0.0.0:8082
+      - --advertise-pandaproxy-addr
+      - redpanda:8082
+    ports:
+      - "9092:9092"   # Kafka API
+      - "8082:8082"   # PandaProxy (optional)
+    healthcheck:
+      test: ["CMD-SHELL", "rpk cluster health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+
+  redpanda-console:
+    image: redpandadata/console:latest
+    container_name: redpanda-console
+    depends_on:
+      redpanda:
+        condition: service_healthy
+    environment:
+      KAFKA_BROKERS: redpanda:9092
+    ports:
+      - "8080:8080"   # UI
+
+  producer:
+    build:
+      context: ./services/producer
+    container_name: threat-producer
+    depends_on:
+      redpanda:
+        condition: service_healthy
+    environment:
+      BOOTSTRAP_SERVERS: redpanda:9092
+      TOPIC: threat.urlhaus.events
+      POLL_SECONDS: "300"
+    restart: unless-stopped
+
+  consumer:
+    build:
+      context: ./services/consumer
+    container_name: threat-consumer
+    depends_on:
+      redpanda:
+        condition: service_healthy
+    environment:
+      PYTHONUNBUFFERED: "1"
+
+      BOOTSTRAP_SERVERS: redpanda:9092
+      TOPIC: threat.urlhaus.events
+      GROUP_ID: threat-risk-consumer
+
+      MINIO_ENDPOINT: minio:9000
+      MINIO_ACCESS_KEY: ${MINIO_ROOT_USER}
+      MINIO_SECRET_KEY: ${MINIO_ROOT_PASSWORD}
+      MINIO_BUCKET: ${MINIO_BUCKET}
+      MINIO_PREFIX: urlhaus/events
+      BATCH_SIZE: "50"
+      BATCH_SECONDS: "2"
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    restart: unless-stopped
