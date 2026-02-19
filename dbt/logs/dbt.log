@@ -18842,3 +18842,1448 @@ where url_key is null
 [0m02:11:58.424470 [debug] [MainThread]: Command `dbt build` succeeded at 02:11:58.424434 after 1.01 seconds
 [0m02:11:58.424652 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8da3350>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadb81610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7f5c390>]}
 [0m02:11:58.424820 [debug] [MainThread]: Flushing usage events
+[0m02:44:34.894780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8aa2850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8aa28d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8aa2890>]}
+
+
+============================== 02:44:34.897781 | c66c8a6f-890f-4d90-8396-d04502a9c504 ==============================
+[0m02:44:34.897781 [info ] [MainThread]: Running with dbt=1.8.7
+[0m02:44:34.898105 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/app', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/app/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt test', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m02:44:34.948119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c66c8a6f-890f-4d90-8396-d04502a9c504', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7d05f10>]}
+[0m02:44:34.965070 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c66c8a6f-890f-4d90-8396-d04502a9c504', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7b773d0>]}
+[0m02:44:34.965423 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m02:44:34.986908 [debug] [MainThread]: checksum: 4af21dafb485259c48497ac86b711ddb1982f3d0f1c0ca4e09356de488b753c0, vars: {}, profile: , target: , version: 1.8.7
+[0m02:44:35.035994 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m02:44:35.036229 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m02:44:35.052749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c66c8a6f-890f-4d90-8396-d04502a9c504', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7952b50>]}
+[0m02:44:35.106164 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c66c8a6f-890f-4d90-8396-d04502a9c504', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7608250>]}
+[0m02:44:35.106519 [info ] [MainThread]: Found 10 models, 33 data tests, 1 source, 429 macros
+[0m02:44:35.106746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c66c8a6f-890f-4d90-8396-d04502a9c504', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7a84810>]}
+[0m02:44:35.108285 [info ] [MainThread]: 
+[0m02:44:35.108642 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m02:44:35.110953 [debug] [ThreadPool]: Acquiring new postgres connection 'list_threat_risk_marts'
+[0m02:44:35.111275 [debug] [ThreadPool]: Acquiring new postgres connection 'list_threat_risk_staging'
+[0m02:44:35.128102 [debug] [ThreadPool]: Using postgres connection "list_threat_risk_marts"
+[0m02:44:35.128284 [debug] [ThreadPool]: Using postgres connection "list_threat_risk_staging"
+[0m02:44:35.128490 [debug] [ThreadPool]: On list_threat_risk_marts: BEGIN
+[0m02:44:35.128692 [debug] [ThreadPool]: On list_threat_risk_staging: BEGIN
+[0m02:44:35.128887 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:44:35.129088 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m02:44:35.135564 [debug] [ThreadPool]: SQL status: BEGIN in 0.007 seconds
+[0m02:44:35.135747 [debug] [ThreadPool]: SQL status: BEGIN in 0.007 seconds
+[0m02:44:35.135972 [debug] [ThreadPool]: Using postgres connection "list_threat_risk_marts"
+[0m02:44:35.136202 [debug] [ThreadPool]: Using postgres connection "list_threat_risk_staging"
+[0m02:44:35.136397 [debug] [ThreadPool]: On list_threat_risk_marts: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "connection_name": "list_threat_risk_marts"} */
+select
+      'threat_risk' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'marts'
+    union all
+    select
+      'threat_risk' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'marts'
+    union all
+    select
+      'threat_risk' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'marts'
+  
+[0m02:44:35.136612 [debug] [ThreadPool]: On list_threat_risk_staging: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "connection_name": "list_threat_risk_staging"} */
+select
+      'threat_risk' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'staging'
+    union all
+    select
+      'threat_risk' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'staging'
+    union all
+    select
+      'threat_risk' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'staging'
+  
+[0m02:44:35.138941 [debug] [ThreadPool]: SQL status: SELECT 3 in 0.002 seconds
+[0m02:44:35.139080 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.002 seconds
+[0m02:44:35.139727 [debug] [ThreadPool]: On list_threat_risk_staging: ROLLBACK
+[0m02:44:35.140278 [debug] [ThreadPool]: On list_threat_risk_marts: ROLLBACK
+[0m02:44:35.140651 [debug] [ThreadPool]: On list_threat_risk_staging: Close
+[0m02:44:35.140773 [debug] [ThreadPool]: On list_threat_risk_marts: Close
+[0m02:44:35.144163 [debug] [MainThread]: Using postgres connection "master"
+[0m02:44:35.144507 [debug] [MainThread]: On master: BEGIN
+[0m02:44:35.144682 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m02:44:35.148720 [debug] [MainThread]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.148988 [debug] [MainThread]: Using postgres connection "master"
+[0m02:44:35.149192 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m02:44:35.152676 [debug] [MainThread]: SQL status: SELECT 5 in 0.003 seconds
+[0m02:44:35.153255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c66c8a6f-890f-4d90-8396-d04502a9c504', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7d04b90>]}
+[0m02:44:35.153488 [debug] [MainThread]: On master: ROLLBACK
+[0m02:44:35.153720 [debug] [MainThread]: Using postgres connection "master"
+[0m02:44:35.153858 [debug] [MainThread]: On master: BEGIN
+[0m02:44:35.154142 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m02:44:35.154306 [debug] [MainThread]: On master: COMMIT
+[0m02:44:35.154448 [debug] [MainThread]: Using postgres connection "master"
+[0m02:44:35.154587 [debug] [MainThread]: On master: COMMIT
+[0m02:44:35.154807 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m02:44:35.154966 [debug] [MainThread]: On master: Close
+[0m02:44:35.155240 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m02:44:35.155494 [info ] [MainThread]: 
+[0m02:44:35.159938 [debug] [Thread-1 (]: Began running node test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41
+[0m02:44:35.160135 [debug] [Thread-2 (]: Began running node test.threat_risk.not_null_dim_product_product.56a877bc84
+[0m02:44:35.160282 [debug] [Thread-3 (]: Began running node test.threat_risk.not_null_dim_product_product_key.f0e1d838d3
+[0m02:44:35.160466 [debug] [Thread-4 (]: Began running node test.threat_risk.not_null_dim_product_vendor_key.78836999d2
+[0m02:44:35.160642 [info ] [Thread-1 (]: 1 of 33 START test accepted_values_stg_urlhaus_url_status__online__offline__unknown  [RUN]
+[0m02:44:35.161109 [info ] [Thread-2 (]: 2 of 33 START test not_null_dim_product_product ................................ [RUN]
+[0m02:44:35.161445 [info ] [Thread-3 (]: 3 of 33 START test not_null_dim_product_product_key ............................ [RUN]
+[0m02:44:35.161706 [info ] [Thread-4 (]: 4 of 33 START test not_null_dim_product_vendor_key ............................. [RUN]
+[0m02:44:35.162082 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_threat_risk_marts, now test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41)
+[0m02:44:35.162335 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_threat_risk_staging, now test.threat_risk.not_null_dim_product_product.56a877bc84)
+[0m02:44:35.162595 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.threat_risk.not_null_dim_product_product_key.f0e1d838d3'
+[0m02:44:35.162851 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.threat_risk.not_null_dim_product_vendor_key.78836999d2'
+[0m02:44:35.163131 [debug] [Thread-1 (]: Began compiling node test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41
+[0m02:44:35.163370 [debug] [Thread-2 (]: Began compiling node test.threat_risk.not_null_dim_product_product.56a877bc84
+[0m02:44:35.163603 [debug] [Thread-3 (]: Began compiling node test.threat_risk.not_null_dim_product_product_key.f0e1d838d3
+[0m02:44:35.163813 [debug] [Thread-4 (]: Began compiling node test.threat_risk.not_null_dim_product_vendor_key.78836999d2
+[0m02:44:35.170516 [debug] [Thread-1 (]: Writing injected SQL for node "test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41"
+[0m02:44:35.173791 [debug] [Thread-2 (]: Writing injected SQL for node "test.threat_risk.not_null_dim_product_product.56a877bc84"
+[0m02:44:35.175396 [debug] [Thread-3 (]: Writing injected SQL for node "test.threat_risk.not_null_dim_product_product_key.f0e1d838d3"
+[0m02:44:35.177274 [debug] [Thread-4 (]: Writing injected SQL for node "test.threat_risk.not_null_dim_product_vendor_key.78836999d2"
+[0m02:44:35.179186 [debug] [Thread-1 (]: Began executing node test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41
+[0m02:44:35.179382 [debug] [Thread-4 (]: Began executing node test.threat_risk.not_null_dim_product_vendor_key.78836999d2
+[0m02:44:35.179544 [debug] [Thread-2 (]: Began executing node test.threat_risk.not_null_dim_product_product.56a877bc84
+[0m02:44:35.179679 [debug] [Thread-3 (]: Began executing node test.threat_risk.not_null_dim_product_product_key.f0e1d838d3
+[0m02:44:35.185442 [debug] [Thread-1 (]: Writing runtime sql for node "test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41"
+[0m02:44:35.186607 [debug] [Thread-4 (]: Writing runtime sql for node "test.threat_risk.not_null_dim_product_vendor_key.78836999d2"
+[0m02:44:35.188239 [debug] [Thread-2 (]: Writing runtime sql for node "test.threat_risk.not_null_dim_product_product.56a877bc84"
+[0m02:44:35.189174 [debug] [Thread-3 (]: Writing runtime sql for node "test.threat_risk.not_null_dim_product_product_key.f0e1d838d3"
+[0m02:44:35.190660 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41"
+[0m02:44:35.190816 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_dim_product_product.56a877bc84"
+[0m02:44:35.191207 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_dim_product_vendor_key.78836999d2"
+[0m02:44:35.191525 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_dim_product_product_key.f0e1d838d3"
+[0m02:44:35.191702 [debug] [Thread-1 (]: On test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41: BEGIN
+[0m02:44:35.192687 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:44:35.192242 [debug] [Thread-4 (]: On test.threat_risk.not_null_dim_product_vendor_key.78836999d2: BEGIN
+[0m02:44:35.192487 [debug] [Thread-3 (]: On test.threat_risk.not_null_dim_product_product_key.f0e1d838d3: BEGIN
+[0m02:44:35.191998 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_product_product.56a877bc84: BEGIN
+[0m02:44:35.193904 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:44:35.193636 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m02:44:35.193167 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m02:44:35.198707 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m02:44:35.199082 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41"
+[0m02:44:35.199968 [debug] [Thread-1 (]: On test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        url_status as value_field,
+        count(*) as n_records
+
+    from "threat_risk"."staging"."stg_urlhaus"
+    group by url_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'online','offline','unknown'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.201021 [debug] [Thread-2 (]: SQL status: BEGIN in 0.007 seconds
+[0m02:44:35.201236 [debug] [Thread-4 (]: SQL status: BEGIN in 0.008 seconds
+[0m02:44:35.201445 [debug] [Thread-3 (]: SQL status: BEGIN in 0.008 seconds
+[0m02:44:35.201677 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_dim_product_product.56a877bc84"
+[0m02:44:35.202001 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_dim_product_vendor_key.78836999d2"
+[0m02:44:35.202282 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_dim_product_product_key.f0e1d838d3"
+[0m02:44:35.202539 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_product_product.56a877bc84: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_dim_product_product.56a877bc84"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product
+from "threat_risk"."marts"."dim_product"
+where product is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.202791 [debug] [Thread-4 (]: On test.threat_risk.not_null_dim_product_vendor_key.78836999d2: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_dim_product_vendor_key.78836999d2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select vendor_key
+from "threat_risk"."marts"."dim_product"
+where vendor_key is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.203055 [debug] [Thread-3 (]: On test.threat_risk.not_null_dim_product_product_key.f0e1d838d3: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_dim_product_product_key.f0e1d838d3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product_key
+from "threat_risk"."marts"."dim_product"
+where product_key is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.204053 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m02:44:35.204244 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m02:44:35.204389 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m02:44:35.206466 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_product_product.56a877bc84: ROLLBACK
+[0m02:44:35.207267 [debug] [Thread-4 (]: On test.threat_risk.not_null_dim_product_vendor_key.78836999d2: ROLLBACK
+[0m02:44:35.208047 [debug] [Thread-3 (]: On test.threat_risk.not_null_dim_product_product_key.f0e1d838d3: ROLLBACK
+[0m02:44:35.208475 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_product_product.56a877bc84: Close
+[0m02:44:35.208706 [debug] [Thread-4 (]: On test.threat_risk.not_null_dim_product_vendor_key.78836999d2: Close
+[0m02:44:35.209021 [debug] [Thread-3 (]: On test.threat_risk.not_null_dim_product_product_key.f0e1d838d3: Close
+[0m02:44:35.209330 [info ] [Thread-2 (]: 2 of 33 PASS not_null_dim_product_product ...................................... [[32mPASS[0m in 0.05s]
+[0m02:44:35.209693 [info ] [Thread-4 (]: 4 of 33 PASS not_null_dim_product_vendor_key ................................... [[32mPASS[0m in 0.05s]
+[0m02:44:35.210690 [debug] [Thread-2 (]: Finished running node test.threat_risk.not_null_dim_product_product.56a877bc84
+[0m02:44:35.211051 [info ] [Thread-3 (]: 3 of 33 PASS not_null_dim_product_product_key .................................. [[32mPASS[0m in 0.05s]
+[0m02:44:35.211310 [debug] [Thread-4 (]: Finished running node test.threat_risk.not_null_dim_product_vendor_key.78836999d2
+[0m02:44:35.211618 [debug] [Thread-2 (]: Began running node test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15
+[0m02:44:35.211983 [debug] [Thread-3 (]: Finished running node test.threat_risk.not_null_dim_product_product_key.f0e1d838d3
+[0m02:44:35.212297 [debug] [Thread-4 (]: Began running node test.threat_risk.not_null_dim_url_url.2b67971659
+[0m02:44:35.212586 [info ] [Thread-2 (]: 5 of 33 START test not_null_dim_product_vendor_project ......................... [RUN]
+[0m02:44:35.212993 [debug] [Thread-3 (]: Began running node test.threat_risk.not_null_dim_url_url_key.89914b0872
+[0m02:44:35.213293 [info ] [Thread-4 (]: 6 of 33 START test not_null_dim_url_url ........................................ [RUN]
+[0m02:44:35.213701 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_dim_product_product.56a877bc84, now test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15)
+[0m02:44:35.214009 [info ] [Thread-3 (]: 7 of 33 START test not_null_dim_url_url_key .................................... [RUN]
+[0m02:44:35.214409 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_dim_product_vendor_key.78836999d2, now test.threat_risk.not_null_dim_url_url.2b67971659)
+[0m02:44:35.214694 [debug] [Thread-2 (]: Began compiling node test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15
+[0m02:44:35.215088 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_dim_product_product_key.f0e1d838d3, now test.threat_risk.not_null_dim_url_url_key.89914b0872)
+[0m02:44:35.215356 [debug] [Thread-4 (]: Began compiling node test.threat_risk.not_null_dim_url_url.2b67971659
+[0m02:44:35.217302 [debug] [Thread-2 (]: Writing injected SQL for node "test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15"
+[0m02:44:35.217602 [debug] [Thread-3 (]: Began compiling node test.threat_risk.not_null_dim_url_url_key.89914b0872
+[0m02:44:35.219469 [debug] [Thread-4 (]: Writing injected SQL for node "test.threat_risk.not_null_dim_url_url.2b67971659"
+[0m02:44:35.221115 [debug] [Thread-3 (]: Writing injected SQL for node "test.threat_risk.not_null_dim_url_url_key.89914b0872"
+[0m02:44:35.221750 [debug] [Thread-2 (]: Began executing node test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15
+[0m02:44:35.222867 [debug] [Thread-2 (]: Writing runtime sql for node "test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15"
+[0m02:44:35.223067 [debug] [Thread-4 (]: Began executing node test.threat_risk.not_null_dim_url_url.2b67971659
+[0m02:44:35.223657 [debug] [Thread-3 (]: Began executing node test.threat_risk.not_null_dim_url_url_key.89914b0872
+[0m02:44:35.224588 [debug] [Thread-4 (]: Writing runtime sql for node "test.threat_risk.not_null_dim_url_url.2b67971659"
+[0m02:44:35.224885 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15"
+[0m02:44:35.225818 [debug] [Thread-3 (]: Writing runtime sql for node "test.threat_risk.not_null_dim_url_url_key.89914b0872"
+[0m02:44:35.225989 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.026 seconds
+[0m02:44:35.226596 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15: BEGIN
+[0m02:44:35.226945 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_dim_url_url.2b67971659"
+[0m02:44:35.228251 [debug] [Thread-4 (]: On test.threat_risk.not_null_dim_url_url.2b67971659: BEGIN
+[0m02:44:35.227939 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:44:35.228081 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_dim_url_url_key.89914b0872"
+[0m02:44:35.227715 [debug] [Thread-1 (]: On test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41: ROLLBACK
+[0m02:44:35.228382 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:44:35.228674 [debug] [Thread-3 (]: On test.threat_risk.not_null_dim_url_url_key.89914b0872: BEGIN
+[0m02:44:35.228973 [debug] [Thread-1 (]: On test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41: Close
+[0m02:44:35.229290 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:44:35.229631 [info ] [Thread-1 (]: 1 of 33 PASS accepted_values_stg_urlhaus_url_status__online__offline__unknown .. [[32mPASS[0m in 0.07s]
+[0m02:44:35.230209 [debug] [Thread-1 (]: Finished running node test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41
+[0m02:44:35.230486 [debug] [Thread-1 (]: Began running node test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba
+[0m02:44:35.230856 [info ] [Thread-1 (]: 8 of 33 START test not_null_dim_vendor_vendor_key .............................. [RUN]
+[0m02:44:35.231222 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.threat_risk.accepted_values_stg_urlhaus_url_status__online__offline__unknown.f20df3aa41, now test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba)
+[0m02:44:35.231489 [debug] [Thread-1 (]: Began compiling node test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba
+[0m02:44:35.233267 [debug] [Thread-1 (]: Writing injected SQL for node "test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba"
+[0m02:44:35.233629 [debug] [Thread-2 (]: SQL status: BEGIN in 0.006 seconds
+[0m02:44:35.233939 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15"
+[0m02:44:35.234170 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select vendor_project
+from "threat_risk"."marts"."dim_product"
+where vendor_project is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.234348 [debug] [Thread-1 (]: Began executing node test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba
+[0m02:44:35.235882 [debug] [Thread-1 (]: Writing runtime sql for node "test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba"
+[0m02:44:35.236040 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m02:44:35.236315 [debug] [Thread-3 (]: SQL status: BEGIN in 0.007 seconds
+[0m02:44:35.236452 [debug] [Thread-4 (]: SQL status: BEGIN in 0.008 seconds
+[0m02:44:35.237659 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_dim_url_url.2b67971659"
+[0m02:44:35.237331 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_dim_url_url_key.89914b0872"
+[0m02:44:35.237471 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba"
+[0m02:44:35.237064 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15: ROLLBACK
+[0m02:44:35.237817 [debug] [Thread-4 (]: On test.threat_risk.not_null_dim_url_url.2b67971659: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_dim_url_url.2b67971659"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select url
+from "threat_risk"."marts"."dim_url"
+where url is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.238002 [debug] [Thread-3 (]: On test.threat_risk.not_null_dim_url_url_key.89914b0872: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_dim_url_url_key.89914b0872"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select url_key
+from "threat_risk"."marts"."dim_url"
+where url_key is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.238186 [debug] [Thread-1 (]: On test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba: BEGIN
+[0m02:44:35.238407 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15: Close
+[0m02:44:35.238750 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:44:35.239143 [info ] [Thread-2 (]: 5 of 33 PASS not_null_dim_product_vendor_project ............................... [[32mPASS[0m in 0.03s]
+[0m02:44:35.239610 [debug] [Thread-2 (]: Finished running node test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15
+[0m02:44:35.239895 [debug] [Thread-2 (]: Began running node test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393
+[0m02:44:35.240175 [info ] [Thread-2 (]: 9 of 33 START test not_null_dim_vendor_vendor_project .......................... [RUN]
+[0m02:44:35.240482 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_dim_product_vendor_project.11c5bb4b15, now test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393)
+[0m02:44:35.240741 [debug] [Thread-2 (]: Began compiling node test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393
+[0m02:44:35.242586 [debug] [Thread-2 (]: Writing injected SQL for node "test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393"
+[0m02:44:35.242778 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m02:44:35.242983 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m02:44:35.243194 [debug] [Thread-1 (]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.243868 [debug] [Thread-3 (]: On test.threat_risk.not_null_dim_url_url_key.89914b0872: ROLLBACK
+[0m02:44:35.244445 [debug] [Thread-4 (]: On test.threat_risk.not_null_dim_url_url.2b67971659: ROLLBACK
+[0m02:44:35.244621 [debug] [Thread-2 (]: Began executing node test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393
+[0m02:44:35.244828 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba"
+[0m02:44:35.246479 [debug] [Thread-1 (]: On test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select vendor_key
+from "threat_risk"."marts"."dim_vendor"
+where vendor_key is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.245335 [debug] [Thread-4 (]: On test.threat_risk.not_null_dim_url_url.2b67971659: Close
+[0m02:44:35.246292 [debug] [Thread-2 (]: Writing runtime sql for node "test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393"
+[0m02:44:35.245105 [debug] [Thread-3 (]: On test.threat_risk.not_null_dim_url_url_key.89914b0872: Close
+[0m02:44:35.246850 [info ] [Thread-4 (]: 6 of 33 PASS not_null_dim_url_url .............................................. [[32mPASS[0m in 0.03s]
+[0m02:44:35.247292 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m02:44:35.247578 [info ] [Thread-3 (]: 7 of 33 PASS not_null_dim_url_url_key .......................................... [[32mPASS[0m in 0.03s]
+[0m02:44:35.247940 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393"
+[0m02:44:35.248157 [debug] [Thread-4 (]: Finished running node test.threat_risk.not_null_dim_url_url.2b67971659
+[0m02:44:35.248765 [debug] [Thread-1 (]: On test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba: ROLLBACK
+[0m02:44:35.248994 [debug] [Thread-3 (]: Finished running node test.threat_risk.not_null_dim_url_url_key.89914b0872
+[0m02:44:35.249187 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393: BEGIN
+[0m02:44:35.249421 [debug] [Thread-4 (]: Began running node test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8
+[0m02:44:35.249754 [debug] [Thread-1 (]: On test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba: Close
+[0m02:44:35.249898 [debug] [Thread-3 (]: Began running node test.threat_risk.not_null_fact_kev_date_day.64362f7a33
+[0m02:44:35.250121 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:44:35.250339 [info ] [Thread-4 (]: 10 of 33 START test not_null_fact_kev_cve_id ................................... [RUN]
+[0m02:44:35.250696 [info ] [Thread-1 (]: 8 of 33 PASS not_null_dim_vendor_vendor_key .................................... [[32mPASS[0m in 0.02s]
+[0m02:44:35.251039 [info ] [Thread-3 (]: 11 of 33 START test not_null_fact_kev_date_day ................................. [RUN]
+[0m02:44:35.251539 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_dim_url_url.2b67971659, now test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8)
+[0m02:44:35.251838 [debug] [Thread-1 (]: Finished running node test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba
+[0m02:44:35.252512 [debug] [Thread-1 (]: Began running node test.threat_risk.not_null_fact_url_events_date_day.d658eee263
+[0m02:44:35.252296 [debug] [Thread-4 (]: Began compiling node test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8
+[0m02:44:35.252071 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_dim_url_url_key.89914b0872, now test.threat_risk.not_null_fact_kev_date_day.64362f7a33)
+[0m02:44:35.252724 [info ] [Thread-1 (]: 12 of 33 START test not_null_fact_url_events_date_day .......................... [RUN]
+[0m02:44:35.255307 [debug] [Thread-4 (]: Writing injected SQL for node "test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8"
+[0m02:44:35.255568 [debug] [Thread-3 (]: Began compiling node test.threat_risk.not_null_fact_kev_date_day.64362f7a33
+[0m02:44:35.255726 [debug] [Thread-2 (]: SQL status: BEGIN in 0.006 seconds
+[0m02:44:35.255959 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_dim_vendor_vendor_key.385212c4ba, now test.threat_risk.not_null_fact_url_events_date_day.d658eee263)
+[0m02:44:35.286231 [debug] [Thread-1 (]: Began compiling node test.threat_risk.not_null_fact_url_events_date_day.d658eee263
+[0m02:44:35.285798 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393"
+[0m02:44:35.286021 [debug] [Thread-4 (]: Began executing node test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8
+[0m02:44:35.285382 [debug] [Thread-3 (]: Writing injected SQL for node "test.threat_risk.not_null_fact_kev_date_day.64362f7a33"
+[0m02:44:35.287809 [debug] [Thread-1 (]: Writing injected SQL for node "test.threat_risk.not_null_fact_url_events_date_day.d658eee263"
+[0m02:44:35.288071 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select vendor_project
+from "threat_risk"."marts"."dim_vendor"
+where vendor_project is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.289046 [debug] [Thread-4 (]: Writing runtime sql for node "test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8"
+[0m02:44:35.289936 [debug] [Thread-3 (]: Began executing node test.threat_risk.not_null_fact_kev_date_day.64362f7a33
+[0m02:44:35.290307 [debug] [Thread-1 (]: Began executing node test.threat_risk.not_null_fact_url_events_date_day.d658eee263
+[0m02:44:35.290481 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m02:44:35.291345 [debug] [Thread-3 (]: Writing runtime sql for node "test.threat_risk.not_null_fact_kev_date_day.64362f7a33"
+[0m02:44:35.292261 [debug] [Thread-1 (]: Writing runtime sql for node "test.threat_risk.not_null_fact_url_events_date_day.d658eee263"
+[0m02:44:35.292446 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8"
+[0m02:44:35.293112 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393: ROLLBACK
+[0m02:44:35.293802 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_fact_kev_date_day.64362f7a33"
+[0m02:44:35.293955 [debug] [Thread-4 (]: On test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8: BEGIN
+[0m02:44:35.294624 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:44:35.294351 [debug] [Thread-3 (]: On test.threat_risk.not_null_fact_kev_date_day.64362f7a33: BEGIN
+[0m02:44:35.294475 [debug] [Thread-2 (]: On test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393: Close
+[0m02:44:35.294140 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.not_null_fact_url_events_date_day.d658eee263"
+[0m02:44:35.294940 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:44:35.295363 [info ] [Thread-2 (]: 9 of 33 PASS not_null_dim_vendor_vendor_project ................................ [[32mPASS[0m in 0.05s]
+[0m02:44:35.295683 [debug] [Thread-1 (]: On test.threat_risk.not_null_fact_url_events_date_day.d658eee263: BEGIN
+[0m02:44:35.296388 [debug] [Thread-2 (]: Finished running node test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393
+[0m02:44:35.296596 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:44:35.296849 [debug] [Thread-2 (]: Began running node test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d
+[0m02:44:35.297513 [info ] [Thread-2 (]: 13 of 33 START test not_null_fact_url_events_url_key ........................... [RUN]
+[0m02:44:35.298265 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_dim_vendor_vendor_project.fffca61393, now test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d)
+[0m02:44:35.298835 [debug] [Thread-4 (]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.299279 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8"
+[0m02:44:35.299047 [debug] [Thread-2 (]: Began compiling node test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d
+[0m02:44:35.300040 [debug] [Thread-4 (]: On test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select cve_id
+from "threat_risk"."marts"."fact_kev"
+where cve_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.302017 [debug] [Thread-2 (]: Writing injected SQL for node "test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d"
+[0m02:44:35.302389 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m02:44:35.302558 [debug] [Thread-3 (]: SQL status: BEGIN in 0.008 seconds
+[0m02:44:35.302946 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.not_null_fact_url_events_date_day.d658eee263"
+[0m02:44:35.303182 [debug] [Thread-2 (]: Began executing node test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d
+[0m02:44:35.303313 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_fact_kev_date_day.64362f7a33"
+[0m02:44:35.303542 [debug] [Thread-1 (]: On test.threat_risk.not_null_fact_url_events_date_day.d658eee263: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_fact_url_events_date_day.d658eee263"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select date_day
+from "threat_risk"."marts"."fact_url_events"
+where date_day is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.304519 [debug] [Thread-2 (]: Writing runtime sql for node "test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d"
+[0m02:44:35.304730 [debug] [Thread-3 (]: On test.threat_risk.not_null_fact_kev_date_day.64362f7a33: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_fact_kev_date_day.64362f7a33"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select date_day
+from "threat_risk"."marts"."fact_kev"
+where date_day is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.305333 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d"
+[0m02:44:35.305539 [debug] [Thread-2 (]: On test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d: BEGIN
+[0m02:44:35.305783 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:44:35.306651 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m02:44:35.307371 [debug] [Thread-4 (]: On test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8: ROLLBACK
+[0m02:44:35.307513 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m02:44:35.307797 [debug] [Thread-4 (]: On test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8: Close
+[0m02:44:35.308775 [info ] [Thread-4 (]: 10 of 33 PASS not_null_fact_kev_cve_id ......................................... [[32mPASS[0m in 0.06s]
+[0m02:44:35.308372 [debug] [Thread-3 (]: On test.threat_risk.not_null_fact_kev_date_day.64362f7a33: ROLLBACK
+[0m02:44:35.309260 [debug] [Thread-4 (]: Finished running node test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8
+[0m02:44:35.309814 [debug] [Thread-4 (]: Began running node test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb
+[0m02:44:35.309646 [debug] [Thread-3 (]: On test.threat_risk.not_null_fact_kev_date_day.64362f7a33: Close
+[0m02:44:35.309980 [debug] [Thread-2 (]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.310189 [info ] [Thread-4 (]: 14 of 33 START test not_null_fct_urlhaus_threat_events_event_id ................ [RUN]
+[0m02:44:35.311052 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_fact_kev_cve_id.5017fad5b8, now test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb)
+[0m02:44:35.310808 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d"
+[0m02:44:35.310587 [info ] [Thread-3 (]: 11 of 33 PASS not_null_fact_kev_date_day ....................................... [[32mPASS[0m in 0.06s]
+[0m02:44:35.311678 [debug] [Thread-3 (]: Finished running node test.threat_risk.not_null_fact_kev_date_day.64362f7a33
+[0m02:44:35.311449 [debug] [Thread-2 (]: On test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select url_key
+from "threat_risk"."marts"."fact_url_events"
+where url_key is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.311223 [debug] [Thread-4 (]: Began compiling node test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb
+[0m02:44:35.311886 [debug] [Thread-3 (]: Began running node test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125
+[0m02:44:35.314078 [debug] [Thread-4 (]: Writing injected SQL for node "test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb"
+[0m02:44:35.314493 [info ] [Thread-3 (]: 15 of 33 START test not_null_fct_urlhaus_threat_events_ingested_at ............. [RUN]
+[0m02:44:35.315257 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_fact_kev_date_day.64362f7a33, now test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125)
+[0m02:44:35.315527 [debug] [Thread-3 (]: Began compiling node test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125
+[0m02:44:35.317624 [debug] [Thread-3 (]: Writing injected SQL for node "test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125"
+[0m02:44:35.317876 [debug] [Thread-4 (]: Began executing node test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb
+[0m02:44:35.319178 [debug] [Thread-4 (]: Writing runtime sql for node "test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb"
+[0m02:44:35.319328 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.014 seconds
+[0m02:44:35.320073 [debug] [Thread-1 (]: On test.threat_risk.not_null_fact_url_events_date_day.d658eee263: ROLLBACK
+[0m02:44:35.320271 [debug] [Thread-3 (]: Began executing node test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125
+[0m02:44:35.320595 [debug] [Thread-1 (]: On test.threat_risk.not_null_fact_url_events_date_day.d658eee263: Close
+[0m02:44:35.321526 [debug] [Thread-3 (]: Writing runtime sql for node "test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125"
+[0m02:44:35.321694 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb"
+[0m02:44:35.321837 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m02:44:35.322115 [info ] [Thread-1 (]: 12 of 33 PASS not_null_fact_url_events_date_day ................................ [[32mPASS[0m in 0.07s]
+[0m02:44:35.322524 [debug] [Thread-4 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb: BEGIN
+[0m02:44:35.322750 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125"
+[0m02:44:35.323276 [debug] [Thread-2 (]: On test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d: ROLLBACK
+[0m02:44:35.323542 [debug] [Thread-1 (]: Finished running node test.threat_risk.not_null_fact_url_events_date_day.d658eee263
+[0m02:44:35.324161 [debug] [Thread-1 (]: Began running node test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b
+[0m02:44:35.323878 [debug] [Thread-3 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125: BEGIN
+[0m02:44:35.323713 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:44:35.324272 [debug] [Thread-2 (]: On test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d: Close
+[0m02:44:35.324459 [info ] [Thread-1 (]: 16 of 33 START test not_null_fct_urlhaus_threat_events_url ..................... [RUN]
+[0m02:44:35.324675 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:44:35.325129 [info ] [Thread-2 (]: 13 of 33 PASS not_null_fact_url_events_url_key ................................. [[32mPASS[0m in 0.03s]
+[0m02:44:35.325343 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_fact_url_events_date_day.d658eee263, now test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b)
+[0m02:44:35.325841 [debug] [Thread-2 (]: Finished running node test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d
+[0m02:44:35.327754 [debug] [Thread-1 (]: Began compiling node test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b
+[0m02:44:35.328105 [debug] [Thread-2 (]: Began running node test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0
+[0m02:44:35.330840 [debug] [Thread-1 (]: Writing injected SQL for node "test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b"
+[0m02:44:35.331128 [debug] [Thread-4 (]: SQL status: BEGIN in 0.007 seconds
+[0m02:44:35.331373 [info ] [Thread-2 (]: 17 of 33 START test not_null_stg_kev_cve_id .................................... [RUN]
+[0m02:44:35.331516 [debug] [Thread-3 (]: SQL status: BEGIN in 0.007 seconds
+[0m02:44:35.331999 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb"
+[0m02:44:35.332237 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_fact_url_events_url_key.1fd764f61d, now test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0)
+[0m02:44:35.332447 [debug] [Thread-1 (]: Began executing node test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b
+[0m02:44:35.332552 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125"
+[0m02:44:35.334058 [debug] [Thread-3 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ingested_at
+from "threat_risk"."marts"."fct_urlhaus_threat_events"
+where ingested_at is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.332907 [debug] [Thread-2 (]: Began compiling node test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0
+[0m02:44:35.333873 [debug] [Thread-1 (]: Writing runtime sql for node "test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b"
+[0m02:44:35.332723 [debug] [Thread-4 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select event_id
+from "threat_risk"."marts"."fct_urlhaus_threat_events"
+where event_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.335613 [debug] [Thread-2 (]: Writing injected SQL for node "test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0"
+[0m02:44:35.335758 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m02:44:35.336390 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b"
+[0m02:44:35.337484 [debug] [Thread-1 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b: BEGIN
+[0m02:44:35.337220 [debug] [Thread-2 (]: Began executing node test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0
+[0m02:44:35.337339 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m02:44:35.337068 [debug] [Thread-3 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125: ROLLBACK
+[0m02:44:35.337622 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:44:35.338509 [debug] [Thread-2 (]: Writing runtime sql for node "test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0"
+[0m02:44:35.339068 [debug] [Thread-4 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb: ROLLBACK
+[0m02:44:35.339299 [debug] [Thread-3 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125: Close
+[0m02:44:35.339779 [debug] [Thread-4 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb: Close
+[0m02:44:35.340092 [info ] [Thread-3 (]: 15 of 33 PASS not_null_fct_urlhaus_threat_events_ingested_at ................... [[32mPASS[0m in 0.02s]
+[0m02:44:35.340321 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0"
+[0m02:44:35.341519 [info ] [Thread-4 (]: 14 of 33 PASS not_null_fct_urlhaus_threat_events_event_id ...................... [[32mPASS[0m in 0.03s]
+[0m02:44:35.342333 [debug] [Thread-4 (]: Finished running node test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb
+[0m02:44:35.342017 [debug] [Thread-2 (]: On test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0: BEGIN
+[0m02:44:35.341810 [debug] [Thread-3 (]: Finished running node test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125
+[0m02:44:35.342529 [debug] [Thread-4 (]: Began running node test.threat_risk.not_null_stg_kev_product.9b2d2b4877
+[0m02:44:35.342721 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:44:35.342929 [debug] [Thread-3 (]: Began running node test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe
+[0m02:44:35.343077 [debug] [Thread-1 (]: SQL status: BEGIN in 0.005 seconds
+[0m02:44:35.343272 [info ] [Thread-4 (]: 18 of 33 START test not_null_stg_kev_product ................................... [RUN]
+[0m02:44:35.344400 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_fct_urlhaus_threat_events_event_id.ffb41112bb, now test.threat_risk.not_null_stg_kev_product.9b2d2b4877)
+[0m02:44:35.344176 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b"
+[0m02:44:35.343760 [info ] [Thread-3 (]: 19 of 33 START test not_null_stg_kev_run_date .................................. [RUN]
+[0m02:44:35.344554 [debug] [Thread-4 (]: Began compiling node test.threat_risk.not_null_stg_kev_product.9b2d2b4877
+[0m02:44:35.344748 [debug] [Thread-1 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select url
+from "threat_risk"."marts"."fct_urlhaus_threat_events"
+where url is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.344951 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_fct_urlhaus_threat_events_ingested_at.e4eeaf8125, now test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe)
+[0m02:44:35.347183 [debug] [Thread-3 (]: Began compiling node test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe
+[0m02:44:35.346958 [debug] [Thread-2 (]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.346648 [debug] [Thread-4 (]: Writing injected SQL for node "test.threat_risk.not_null_stg_kev_product.9b2d2b4877"
+[0m02:44:35.348777 [debug] [Thread-3 (]: Writing injected SQL for node "test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe"
+[0m02:44:35.348950 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.002 seconds
+[0m02:44:35.349129 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0"
+[0m02:44:35.350034 [debug] [Thread-1 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b: ROLLBACK
+[0m02:44:35.350197 [debug] [Thread-4 (]: Began executing node test.threat_risk.not_null_stg_kev_product.9b2d2b4877
+[0m02:44:35.350368 [debug] [Thread-3 (]: Began executing node test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe
+[0m02:44:35.350488 [debug] [Thread-2 (]: On test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select cve_id
+from "threat_risk"."staging"."stg_kev"
+where cve_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.350717 [debug] [Thread-1 (]: On test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b: Close
+[0m02:44:35.351615 [debug] [Thread-4 (]: Writing runtime sql for node "test.threat_risk.not_null_stg_kev_product.9b2d2b4877"
+[0m02:44:35.352458 [debug] [Thread-3 (]: Writing runtime sql for node "test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe"
+[0m02:44:35.352794 [info ] [Thread-1 (]: 16 of 33 PASS not_null_fct_urlhaus_threat_events_url ........................... [[32mPASS[0m in 0.03s]
+[0m02:44:35.353768 [debug] [Thread-1 (]: Finished running node test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b
+[0m02:44:35.353602 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_stg_kev_product.9b2d2b4877"
+[0m02:44:35.354373 [debug] [Thread-4 (]: On test.threat_risk.not_null_stg_kev_product.9b2d2b4877: BEGIN
+[0m02:44:35.354186 [debug] [Thread-1 (]: Began running node test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89
+[0m02:44:35.354032 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe"
+[0m02:44:35.354520 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:44:35.354723 [info ] [Thread-1 (]: 20 of 33 START test not_null_stg_kev_vendor_project ............................ [RUN]
+[0m02:44:35.355028 [debug] [Thread-3 (]: On test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe: BEGIN
+[0m02:44:35.355486 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_fct_urlhaus_threat_events_url.44a286cf5b, now test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89)
+[0m02:44:35.355716 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:44:35.355903 [debug] [Thread-1 (]: Began compiling node test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89
+[0m02:44:35.359546 [debug] [Thread-1 (]: Writing injected SQL for node "test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89"
+[0m02:44:35.359879 [debug] [Thread-4 (]: SQL status: BEGIN in 0.005 seconds
+[0m02:44:35.360009 [debug] [Thread-3 (]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.360461 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe"
+[0m02:44:35.360321 [debug] [Thread-1 (]: Began executing node test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89
+[0m02:44:35.360215 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_stg_kev_product.9b2d2b4877"
+[0m02:44:35.360597 [debug] [Thread-3 (]: On test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select run_date
+from "threat_risk"."staging"."stg_kev"
+where run_date is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.361748 [debug] [Thread-1 (]: Writing runtime sql for node "test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89"
+[0m02:44:35.361899 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m02:44:35.362072 [debug] [Thread-4 (]: On test.threat_risk.not_null_stg_kev_product.9b2d2b4877: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_stg_kev_product.9b2d2b4877"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select product
+from "threat_risk"."staging"."stg_kev"
+where product is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.363062 [debug] [Thread-2 (]: On test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0: ROLLBACK
+[0m02:44:35.363307 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89"
+[0m02:44:35.363703 [debug] [Thread-1 (]: On test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89: BEGIN
+[0m02:44:35.363837 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:44:35.363603 [debug] [Thread-2 (]: On test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0: Close
+[0m02:44:35.364296 [info ] [Thread-2 (]: 17 of 33 PASS not_null_stg_kev_cve_id .......................................... [[32mPASS[0m in 0.03s]
+[0m02:44:35.364706 [debug] [Thread-2 (]: Finished running node test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0
+[0m02:44:35.364976 [debug] [Thread-2 (]: Began running node test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93
+[0m02:44:35.365265 [info ] [Thread-2 (]: 21 of 33 START test not_null_stg_urlhaus_run_date .............................. [RUN]
+[0m02:44:35.366120 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_stg_kev_cve_id.2f20f2bcb0, now test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93)
+[0m02:44:35.366323 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m02:44:35.366996 [debug] [Thread-2 (]: Began compiling node test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93
+[0m02:44:35.367124 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.004 seconds
+[0m02:44:35.367742 [debug] [Thread-3 (]: On test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe: ROLLBACK
+[0m02:44:35.369451 [debug] [Thread-2 (]: Writing injected SQL for node "test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93"
+[0m02:44:35.369641 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m02:44:35.370264 [debug] [Thread-4 (]: On test.threat_risk.not_null_stg_kev_product.9b2d2b4877: ROLLBACK
+[0m02:44:35.370599 [debug] [Thread-3 (]: On test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe: Close
+[0m02:44:35.370771 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89"
+[0m02:44:35.370979 [debug] [Thread-2 (]: Began executing node test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93
+[0m02:44:35.371097 [debug] [Thread-4 (]: On test.threat_risk.not_null_stg_kev_product.9b2d2b4877: Close
+[0m02:44:35.371374 [info ] [Thread-3 (]: 19 of 33 PASS not_null_stg_kev_run_date ........................................ [[32mPASS[0m in 0.03s]
+[0m02:44:35.371613 [debug] [Thread-1 (]: On test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select vendor_project
+from "threat_risk"."staging"."stg_kev"
+where vendor_project is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.372724 [debug] [Thread-2 (]: Writing runtime sql for node "test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93"
+[0m02:44:35.373046 [info ] [Thread-4 (]: 18 of 33 PASS not_null_stg_kev_product ......................................... [[32mPASS[0m in 0.03s]
+[0m02:44:35.373255 [debug] [Thread-3 (]: Finished running node test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe
+[0m02:44:35.373967 [debug] [Thread-4 (]: Finished running node test.threat_risk.not_null_stg_kev_product.9b2d2b4877
+[0m02:44:35.374511 [debug] [Thread-4 (]: Began running node test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd
+[0m02:44:35.374360 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93"
+[0m02:44:35.374170 [debug] [Thread-3 (]: Began running node test.threat_risk.not_null_stg_urlhaus_url.8004f29367
+[0m02:44:35.374666 [info ] [Thread-4 (]: 23 of 33 START test not_null_stg_urlhaus_url_status ............................ [RUN]
+[0m02:44:35.375341 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_stg_kev_product.9b2d2b4877, now test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd)
+[0m02:44:35.375093 [info ] [Thread-3 (]: 22 of 33 START test not_null_stg_urlhaus_url ................................... [RUN]
+[0m02:44:35.374872 [debug] [Thread-2 (]: On test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93: BEGIN
+[0m02:44:35.375807 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:44:35.375661 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_stg_kev_run_date.5518d7c0fe, now test.threat_risk.not_null_stg_urlhaus_url.8004f29367)
+[0m02:44:35.375487 [debug] [Thread-4 (]: Began compiling node test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd
+[0m02:44:35.376063 [debug] [Thread-3 (]: Began compiling node test.threat_risk.not_null_stg_urlhaus_url.8004f29367
+[0m02:44:35.378712 [debug] [Thread-4 (]: Writing injected SQL for node "test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd"
+[0m02:44:35.380591 [debug] [Thread-3 (]: Writing injected SQL for node "test.threat_risk.not_null_stg_urlhaus_url.8004f29367"
+[0m02:44:35.380790 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.007 seconds
+[0m02:44:35.381244 [debug] [Thread-2 (]: SQL status: BEGIN in 0.005 seconds
+[0m02:44:35.382185 [debug] [Thread-1 (]: On test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89: ROLLBACK
+[0m02:44:35.382695 [debug] [Thread-4 (]: Began executing node test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd
+[0m02:44:35.382826 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93"
+[0m02:44:35.382970 [debug] [Thread-3 (]: Began executing node test.threat_risk.not_null_stg_urlhaus_url.8004f29367
+[0m02:44:35.383228 [debug] [Thread-1 (]: On test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89: Close
+[0m02:44:35.384218 [debug] [Thread-4 (]: Writing runtime sql for node "test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd"
+[0m02:44:35.384433 [debug] [Thread-2 (]: On test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select run_date
+from "threat_risk"."staging"."stg_urlhaus"
+where run_date is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.385485 [debug] [Thread-3 (]: Writing runtime sql for node "test.threat_risk.not_null_stg_urlhaus_url.8004f29367"
+[0m02:44:35.386004 [info ] [Thread-1 (]: 20 of 33 PASS not_null_stg_kev_vendor_project .................................. [[32mPASS[0m in 0.03s]
+[0m02:44:35.387150 [debug] [Thread-1 (]: Finished running node test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89
+[0m02:44:35.386765 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd"
+[0m02:44:35.387749 [debug] [Thread-4 (]: On test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd: BEGIN
+[0m02:44:35.387588 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_stg_urlhaus_url.8004f29367"
+[0m02:44:35.387369 [debug] [Thread-1 (]: Began running node test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26
+[0m02:44:35.387891 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:44:35.388070 [debug] [Thread-3 (]: On test.threat_risk.not_null_stg_urlhaus_url.8004f29367: BEGIN
+[0m02:44:35.388254 [info ] [Thread-1 (]: 24 of 33 START test source_not_null_raw_urlhaus_events_event_id ................ [RUN]
+[0m02:44:35.388825 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:44:35.389297 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_stg_kev_vendor_project.464f7a6e89, now test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26)
+[0m02:44:35.390300 [debug] [Thread-1 (]: Began compiling node test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26
+[0m02:44:35.392163 [debug] [Thread-1 (]: Writing injected SQL for node "test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26"
+[0m02:44:35.393103 [debug] [Thread-4 (]: SQL status: BEGIN in 0.005 seconds
+[0m02:44:35.393762 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd"
+[0m02:44:35.394106 [debug] [Thread-4 (]: On test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select url_status
+from "threat_risk"."staging"."stg_urlhaus"
+where url_status is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.394263 [debug] [Thread-1 (]: Began executing node test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26
+[0m02:44:35.394444 [debug] [Thread-3 (]: SQL status: BEGIN in 0.006 seconds
+[0m02:44:35.395530 [debug] [Thread-1 (]: Writing runtime sql for node "test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26"
+[0m02:44:35.395867 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.not_null_stg_urlhaus_url.8004f29367"
+[0m02:44:35.396313 [debug] [Thread-3 (]: On test.threat_risk.not_null_stg_urlhaus_url.8004f29367: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.not_null_stg_urlhaus_url.8004f29367"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select url
+from "threat_risk"."staging"."stg_urlhaus"
+where url is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.396985 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26"
+[0m02:44:35.397372 [debug] [Thread-1 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26: BEGIN
+[0m02:44:35.397799 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m02:44:35.398238 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:44:35.399445 [debug] [Thread-2 (]: On test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93: ROLLBACK
+[0m02:44:35.400398 [debug] [Thread-2 (]: On test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93: Close
+[0m02:44:35.400804 [info ] [Thread-2 (]: 21 of 33 PASS not_null_stg_urlhaus_run_date .................................... [[32mPASS[0m in 0.03s]
+[0m02:44:35.403238 [debug] [Thread-2 (]: Finished running node test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93
+[0m02:44:35.404485 [debug] [Thread-2 (]: Began running node test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3
+[0m02:44:35.404841 [info ] [Thread-2 (]: 25 of 33 START test source_not_null_raw_urlhaus_events_ingested_at ............. [RUN]
+[0m02:44:35.405663 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_stg_urlhaus_run_date.c419682d93, now test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3)
+[0m02:44:35.406181 [debug] [Thread-2 (]: Began compiling node test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3
+[0m02:44:35.405890 [debug] [Thread-1 (]: SQL status: BEGIN in 0.008 seconds
+[0m02:44:35.408578 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26"
+[0m02:44:35.408325 [debug] [Thread-2 (]: Writing injected SQL for node "test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3"
+[0m02:44:35.408764 [debug] [Thread-1 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select event_id
+from "threat_risk"."raw"."urlhaus_events"
+where event_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.409968 [debug] [Thread-2 (]: Began executing node test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3
+[0m02:44:35.411770 [debug] [Thread-2 (]: Writing runtime sql for node "test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3"
+[0m02:44:35.411990 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.017 seconds
+[0m02:44:35.412197 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.003 seconds
+[0m02:44:35.412994 [debug] [Thread-4 (]: On test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd: ROLLBACK
+[0m02:44:35.413665 [debug] [Thread-1 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26: ROLLBACK
+[0m02:44:35.413832 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3"
+[0m02:44:35.414328 [debug] [Thread-4 (]: On test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd: Close
+[0m02:44:35.414457 [debug] [Thread-1 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26: Close
+[0m02:44:35.414634 [debug] [Thread-2 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3: BEGIN
+[0m02:44:35.415263 [info ] [Thread-1 (]: 24 of 33 PASS source_not_null_raw_urlhaus_events_event_id ...................... [[32mPASS[0m in 0.03s]
+[0m02:44:35.414995 [info ] [Thread-4 (]: 23 of 33 PASS not_null_stg_urlhaus_url_status .................................. [[32mPASS[0m in 0.04s]
+[0m02:44:35.415792 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:44:35.416212 [debug] [Thread-1 (]: Finished running node test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26
+[0m02:44:35.416464 [debug] [Thread-4 (]: Finished running node test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd
+[0m02:44:35.417297 [debug] [Thread-4 (]: Began running node test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286
+[0m02:44:35.417070 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.021 seconds
+[0m02:44:35.416862 [debug] [Thread-1 (]: Began running node test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67
+[0m02:44:35.418619 [info ] [Thread-1 (]: 26 of 33 START test source_not_null_raw_urlhaus_events_source .................. [RUN]
+[0m02:44:35.418371 [debug] [Thread-3 (]: On test.threat_risk.not_null_stg_urlhaus_url.8004f29367: ROLLBACK
+[0m02:44:35.417540 [info ] [Thread-4 (]: 27 of 33 START test source_unique_raw_urlhaus_events_event_id .................. [RUN]
+[0m02:44:35.419350 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_stg_urlhaus_url_status.36094b12bd, now test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286)
+[0m02:44:35.419015 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.threat_risk.source_not_null_raw_urlhaus_events_event_id.4d5545ab26, now test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67)
+[0m02:44:35.419473 [debug] [Thread-3 (]: On test.threat_risk.not_null_stg_urlhaus_url.8004f29367: Close
+[0m02:44:35.419630 [debug] [Thread-4 (]: Began compiling node test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286
+[0m02:44:35.419775 [debug] [Thread-1 (]: Began compiling node test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67
+[0m02:44:35.420066 [info ] [Thread-3 (]: 22 of 33 PASS not_null_stg_urlhaus_url ......................................... [[32mPASS[0m in 0.04s]
+[0m02:44:35.420231 [debug] [Thread-2 (]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.423295 [debug] [Thread-4 (]: Writing injected SQL for node "test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286"
+[0m02:44:35.424810 [debug] [Thread-1 (]: Writing injected SQL for node "test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67"
+[0m02:44:35.425088 [debug] [Thread-3 (]: Finished running node test.threat_risk.not_null_stg_urlhaus_url.8004f29367
+[0m02:44:35.425301 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3"
+[0m02:44:35.426111 [debug] [Thread-3 (]: Began running node test.threat_risk.unique_dim_product_product_key.1753236bd0
+[0m02:44:35.426486 [debug] [Thread-4 (]: Began executing node test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286
+[0m02:44:35.426759 [debug] [Thread-2 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ingested_at
+from "threat_risk"."raw"."urlhaus_events"
+where ingested_at is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.426622 [debug] [Thread-1 (]: Began executing node test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67
+[0m02:44:35.427009 [info ] [Thread-3 (]: 28 of 33 START test unique_dim_product_product_key ............................. [RUN]
+[0m02:44:35.429550 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.threat_risk.not_null_stg_urlhaus_url.8004f29367, now test.threat_risk.unique_dim_product_product_key.1753236bd0)
+[0m02:44:35.429198 [debug] [Thread-1 (]: Writing runtime sql for node "test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67"
+[0m02:44:35.429340 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m02:44:35.428180 [debug] [Thread-4 (]: Writing runtime sql for node "test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286"
+[0m02:44:35.429730 [debug] [Thread-3 (]: Began compiling node test.threat_risk.unique_dim_product_product_key.1753236bd0
+[0m02:44:35.431938 [debug] [Thread-2 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3: ROLLBACK
+[0m02:44:35.432258 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67"
+[0m02:44:35.434262 [debug] [Thread-1 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67: BEGIN
+[0m02:44:35.433974 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286"
+[0m02:44:35.434083 [debug] [Thread-2 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3: Close
+[0m02:44:35.433721 [debug] [Thread-3 (]: Writing injected SQL for node "test.threat_risk.unique_dim_product_product_key.1753236bd0"
+[0m02:44:35.434410 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:44:35.434702 [debug] [Thread-4 (]: On test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286: BEGIN
+[0m02:44:35.435106 [info ] [Thread-2 (]: 25 of 33 PASS source_not_null_raw_urlhaus_events_ingested_at ................... [[32mPASS[0m in 0.03s]
+[0m02:44:35.435870 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:44:35.436134 [debug] [Thread-3 (]: Began executing node test.threat_risk.unique_dim_product_product_key.1753236bd0
+[0m02:44:35.436351 [debug] [Thread-2 (]: Finished running node test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3
+[0m02:44:35.437569 [debug] [Thread-3 (]: Writing runtime sql for node "test.threat_risk.unique_dim_product_product_key.1753236bd0"
+[0m02:44:35.437829 [debug] [Thread-2 (]: Began running node test.threat_risk.unique_dim_url_url.4c561dc36d
+[0m02:44:35.440211 [debug] [Thread-4 (]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.440379 [info ] [Thread-2 (]: 29 of 33 START test unique_dim_url_url ......................................... [RUN]
+[0m02:44:35.440667 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286"
+[0m02:44:35.440979 [debug] [Thread-1 (]: SQL status: BEGIN in 0.007 seconds
+[0m02:44:35.441198 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.unique_dim_product_product_key.1753236bd0"
+[0m02:44:35.441341 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.threat_risk.source_not_null_raw_urlhaus_events_ingested_at.fbe25572a3, now test.threat_risk.unique_dim_url_url.4c561dc36d)
+[0m02:44:35.442076 [debug] [Thread-2 (]: Began compiling node test.threat_risk.unique_dim_url_url.4c561dc36d
+[0m02:44:35.441714 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67"
+[0m02:44:35.441897 [debug] [Thread-3 (]: On test.threat_risk.unique_dim_product_product_key.1753236bd0: BEGIN
+[0m02:44:35.441533 [debug] [Thread-4 (]: On test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    event_id as unique_field,
+    count(*) as n_records
+
+from "threat_risk"."raw"."urlhaus_events"
+where event_id is not null
+group by event_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.443869 [debug] [Thread-2 (]: Writing injected SQL for node "test.threat_risk.unique_dim_url_url.4c561dc36d"
+[0m02:44:35.444163 [debug] [Thread-1 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select source
+from "threat_risk"."raw"."urlhaus_events"
+where source is null
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.444398 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:44:35.445021 [debug] [Thread-2 (]: Began executing node test.threat_risk.unique_dim_url_url.4c561dc36d
+[0m02:44:35.446049 [debug] [Thread-2 (]: Writing runtime sql for node "test.threat_risk.unique_dim_url_url.4c561dc36d"
+[0m02:44:35.446562 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.unique_dim_url_url.4c561dc36d"
+[0m02:44:35.446780 [debug] [Thread-2 (]: On test.threat_risk.unique_dim_url_url.4c561dc36d: BEGIN
+[0m02:44:35.447043 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:44:35.448612 [debug] [Thread-3 (]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.449049 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.unique_dim_product_product_key.1753236bd0"
+[0m02:44:35.450256 [debug] [Thread-3 (]: On test.threat_risk.unique_dim_product_product_key.1753236bd0: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.unique_dim_product_product_key.1753236bd0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    product_key as unique_field,
+    count(*) as n_records
+
+from "threat_risk"."marts"."dim_product"
+where product_key is not null
+group by product_key
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.450962 [debug] [Thread-2 (]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.451158 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.unique_dim_url_url.4c561dc36d"
+[0m02:44:35.451380 [debug] [Thread-2 (]: On test.threat_risk.unique_dim_url_url.4c561dc36d: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.unique_dim_url_url.4c561dc36d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    url as unique_field,
+    count(*) as n_records
+
+from "threat_risk"."marts"."dim_url"
+where url is not null
+group by url
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.451551 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m02:44:35.452358 [debug] [Thread-3 (]: On test.threat_risk.unique_dim_product_product_key.1753236bd0: ROLLBACK
+[0m02:44:35.452619 [debug] [Thread-3 (]: On test.threat_risk.unique_dim_product_product_key.1753236bd0: Close
+[0m02:44:35.453002 [info ] [Thread-3 (]: 28 of 33 PASS unique_dim_product_product_key ................................... [[32mPASS[0m in 0.02s]
+[0m02:44:35.453284 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.008 seconds
+[0m02:44:35.453524 [debug] [Thread-3 (]: Finished running node test.threat_risk.unique_dim_product_product_key.1753236bd0
+[0m02:44:35.454164 [debug] [Thread-1 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67: ROLLBACK
+[0m02:44:35.454403 [debug] [Thread-3 (]: Began running node test.threat_risk.unique_dim_url_url_key.d67ee5b979
+[0m02:44:35.454596 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m02:44:35.454794 [info ] [Thread-3 (]: 30 of 33 START test unique_dim_url_url_key ..................................... [RUN]
+[0m02:44:35.455010 [debug] [Thread-1 (]: On test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67: Close
+[0m02:44:35.455612 [debug] [Thread-4 (]: On test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286: ROLLBACK
+[0m02:44:35.455838 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.threat_risk.unique_dim_product_product_key.1753236bd0, now test.threat_risk.unique_dim_url_url_key.d67ee5b979)
+[0m02:44:35.456154 [info ] [Thread-1 (]: 26 of 33 PASS source_not_null_raw_urlhaus_events_source ........................ [[32mPASS[0m in 0.04s]
+[0m02:44:35.456498 [debug] [Thread-4 (]: On test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286: Close
+[0m02:44:35.456649 [debug] [Thread-3 (]: Began compiling node test.threat_risk.unique_dim_url_url_key.d67ee5b979
+[0m02:44:35.456976 [debug] [Thread-1 (]: Finished running node test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67
+[0m02:44:35.457270 [info ] [Thread-4 (]: 27 of 33 PASS source_unique_raw_urlhaus_events_event_id ........................ [[32mPASS[0m in 0.04s]
+[0m02:44:35.459127 [debug] [Thread-3 (]: Writing injected SQL for node "test.threat_risk.unique_dim_url_url_key.d67ee5b979"
+[0m02:44:35.459433 [debug] [Thread-1 (]: Began running node test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68
+[0m02:44:35.459802 [debug] [Thread-4 (]: Finished running node test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286
+[0m02:44:35.460299 [info ] [Thread-1 (]: 31 of 33 START test unique_dim_vendor_vendor_key ............................... [RUN]
+[0m02:44:35.460621 [debug] [Thread-3 (]: Began executing node test.threat_risk.unique_dim_url_url_key.d67ee5b979
+[0m02:44:35.460849 [debug] [Thread-4 (]: Began running node test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96
+[0m02:44:35.461055 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m02:44:35.461215 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.threat_risk.source_not_null_raw_urlhaus_events_source.b19ca54d67, now test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68)
+[0m02:44:35.462258 [debug] [Thread-3 (]: Writing runtime sql for node "test.threat_risk.unique_dim_url_url_key.d67ee5b979"
+[0m02:44:35.462455 [info ] [Thread-4 (]: 32 of 33 START test unique_dim_vendor_vendor_project ........................... [RUN]
+[0m02:44:35.463131 [debug] [Thread-2 (]: On test.threat_risk.unique_dim_url_url.4c561dc36d: ROLLBACK
+[0m02:44:35.463310 [debug] [Thread-1 (]: Began compiling node test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68
+[0m02:44:35.463670 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.threat_risk.source_unique_raw_urlhaus_events_event_id.b2983b7286, now test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96)
+[0m02:44:35.464025 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.unique_dim_url_url_key.d67ee5b979"
+[0m02:44:35.464150 [debug] [Thread-2 (]: On test.threat_risk.unique_dim_url_url.4c561dc36d: Close
+[0m02:44:35.465832 [debug] [Thread-1 (]: Writing injected SQL for node "test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68"
+[0m02:44:35.466055 [debug] [Thread-4 (]: Began compiling node test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96
+[0m02:44:35.466266 [debug] [Thread-3 (]: On test.threat_risk.unique_dim_url_url_key.d67ee5b979: BEGIN
+[0m02:44:35.466607 [info ] [Thread-2 (]: 29 of 33 PASS unique_dim_url_url ............................................... [[32mPASS[0m in 0.03s]
+[0m02:44:35.469322 [debug] [Thread-2 (]: Finished running node test.threat_risk.unique_dim_url_url.4c561dc36d
+[0m02:44:35.468913 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m02:44:35.469070 [debug] [Thread-1 (]: Began executing node test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68
+[0m02:44:35.468627 [debug] [Thread-4 (]: Writing injected SQL for node "test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96"
+[0m02:44:35.469498 [debug] [Thread-2 (]: Began running node test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4
+[0m02:44:35.470702 [debug] [Thread-1 (]: Writing runtime sql for node "test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68"
+[0m02:44:35.471837 [debug] [Thread-4 (]: Began executing node test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96
+[0m02:44:35.471513 [info ] [Thread-2 (]: 33 of 33 START test unique_fct_urlhaus_threat_events_event_id .................. [RUN]
+[0m02:44:35.473077 [debug] [Thread-4 (]: Writing runtime sql for node "test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96"
+[0m02:44:35.473389 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68"
+[0m02:44:35.473651 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.threat_risk.unique_dim_url_url.4c561dc36d, now test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4)
+[0m02:44:35.474151 [debug] [Thread-1 (]: On test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68: BEGIN
+[0m02:44:35.474644 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m02:44:35.474489 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96"
+[0m02:44:35.474332 [debug] [Thread-2 (]: Began compiling node test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4
+[0m02:44:35.474944 [debug] [Thread-4 (]: On test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96: BEGIN
+[0m02:44:35.476635 [debug] [Thread-2 (]: Writing injected SQL for node "test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4"
+[0m02:44:35.476793 [debug] [Thread-3 (]: SQL status: BEGIN in 0.008 seconds
+[0m02:44:35.476970 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m02:44:35.477392 [debug] [Thread-3 (]: Using postgres connection "test.threat_risk.unique_dim_url_url_key.d67ee5b979"
+[0m02:44:35.477629 [debug] [Thread-2 (]: Began executing node test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4
+[0m02:44:35.477977 [debug] [Thread-3 (]: On test.threat_risk.unique_dim_url_url_key.d67ee5b979: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.unique_dim_url_url_key.d67ee5b979"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    url_key as unique_field,
+    count(*) as n_records
+
+from "threat_risk"."marts"."dim_url"
+where url_key is not null
+group by url_key
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.480117 [debug] [Thread-2 (]: Writing runtime sql for node "test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4"
+[0m02:44:35.480423 [debug] [Thread-1 (]: SQL status: BEGIN in 0.006 seconds
+[0m02:44:35.480798 [debug] [Thread-1 (]: Using postgres connection "test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68"
+[0m02:44:35.481063 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4"
+[0m02:44:35.481219 [debug] [Thread-4 (]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.481355 [debug] [Thread-1 (]: On test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    vendor_key as unique_field,
+    count(*) as n_records
+
+from "threat_risk"."marts"."dim_vendor"
+where vendor_key is not null
+group by vendor_key
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.481562 [debug] [Thread-2 (]: On test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4: BEGIN
+[0m02:44:35.481814 [debug] [Thread-4 (]: Using postgres connection "test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96"
+[0m02:44:35.482271 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m02:44:35.482554 [debug] [Thread-4 (]: On test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    vendor_project as unique_field,
+    count(*) as n_records
+
+from "threat_risk"."marts"."dim_vendor"
+where vendor_project is not null
+group by vendor_project
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.482932 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m02:44:35.483698 [debug] [Thread-1 (]: On test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68: ROLLBACK
+[0m02:44:35.483822 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.001 seconds
+[0m02:44:35.484125 [debug] [Thread-1 (]: On test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68: Close
+[0m02:44:35.485754 [debug] [Thread-4 (]: On test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96: ROLLBACK
+[0m02:44:35.486144 [info ] [Thread-1 (]: 31 of 33 PASS unique_dim_vendor_vendor_key ..................................... [[32mPASS[0m in 0.02s]
+[0m02:44:35.486531 [debug] [Thread-4 (]: On test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96: Close
+[0m02:44:35.486690 [debug] [Thread-2 (]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.487337 [debug] [Thread-2 (]: Using postgres connection "test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4"
+[0m02:44:35.487148 [info ] [Thread-4 (]: 32 of 33 PASS unique_dim_vendor_vendor_project ................................. [[32mPASS[0m in 0.02s]
+[0m02:44:35.486863 [debug] [Thread-1 (]: Finished running node test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68
+[0m02:44:35.487519 [debug] [Thread-2 (]: On test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4: /* {"app": "dbt", "dbt_version": "1.8.7", "profile_name": "threat_risk", "target_name": "dev", "node_id": "test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    event_id as unique_field,
+    count(*) as n_records
+
+from "threat_risk"."marts"."fct_urlhaus_threat_events"
+where event_id is not null
+group by event_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m02:44:35.487772 [debug] [Thread-4 (]: Finished running node test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96
+[0m02:44:35.488947 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m02:44:35.489537 [debug] [Thread-3 (]: On test.threat_risk.unique_dim_url_url_key.d67ee5b979: ROLLBACK
+[0m02:44:35.489804 [debug] [Thread-3 (]: On test.threat_risk.unique_dim_url_url_key.d67ee5b979: Close
+[0m02:44:35.490121 [info ] [Thread-3 (]: 30 of 33 PASS unique_dim_url_url_key ........................................... [[32mPASS[0m in 0.03s]
+[0m02:44:35.490410 [debug] [Thread-3 (]: Finished running node test.threat_risk.unique_dim_url_url_key.d67ee5b979
+[0m02:44:35.492946 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.005 seconds
+[0m02:44:35.493598 [debug] [Thread-2 (]: On test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4: ROLLBACK
+[0m02:44:35.493952 [debug] [Thread-2 (]: On test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4: Close
+[0m02:44:35.494291 [info ] [Thread-2 (]: 33 of 33 PASS unique_fct_urlhaus_threat_events_event_id ........................ [[32mPASS[0m in 0.02s]
+[0m02:44:35.494602 [debug] [Thread-2 (]: Finished running node test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4
+[0m02:44:35.495519 [debug] [MainThread]: Using postgres connection "master"
+[0m02:44:35.495703 [debug] [MainThread]: On master: BEGIN
+[0m02:44:35.495860 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m02:44:35.499514 [debug] [MainThread]: SQL status: BEGIN in 0.004 seconds
+[0m02:44:35.499765 [debug] [MainThread]: On master: COMMIT
+[0m02:44:35.499913 [debug] [MainThread]: Using postgres connection "master"
+[0m02:44:35.500102 [debug] [MainThread]: On master: COMMIT
+[0m02:44:35.500351 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m02:44:35.500543 [debug] [MainThread]: On master: Close
+[0m02:44:35.500778 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m02:44:35.500947 [debug] [MainThread]: Connection 'test.threat_risk.unique_dim_vendor_vendor_key.3de6f52c68' was properly closed.
+[0m02:44:35.501100 [debug] [MainThread]: Connection 'test.threat_risk.unique_fct_urlhaus_threat_events_event_id.9c126292e4' was properly closed.
+[0m02:44:35.501353 [debug] [MainThread]: Connection 'test.threat_risk.unique_dim_url_url_key.d67ee5b979' was properly closed.
+[0m02:44:35.501563 [debug] [MainThread]: Connection 'test.threat_risk.unique_dim_vendor_vendor_project.ceb940ca96' was properly closed.
+[0m02:44:35.501837 [info ] [MainThread]: 
+[0m02:44:35.502083 [info ] [MainThread]: Finished running 33 data tests in 0 hours 0 minutes and 0.39 seconds (0.39s).
+[0m02:44:35.503629 [debug] [MainThread]: Command end result
+[0m02:44:35.528434 [info ] [MainThread]: 
+[0m02:44:35.528776 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m02:44:35.529068 [info ] [MainThread]: 
+[0m02:44:35.529235 [info ] [MainThread]: Done. PASS=33 WARN=0 ERROR=0 SKIP=0 TOTAL=33
+[0m02:44:35.529700 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 0.65214115, "process_user_time": 1.034743, "process_kernel_time": 0.11997, "process_mem_max_rss": "122908", "process_out_blocks": "4136", "process_in_blocks": "0"}
+[0m02:44:35.529907 [debug] [MainThread]: Command `dbt test` succeeded at 02:44:35.529870 after 0.65 seconds
+[0m02:44:35.530087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad8a1610>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8d86cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8d86c50>]}
+[0m02:44:35.530366 [debug] [MainThread]: Flushing usage events
