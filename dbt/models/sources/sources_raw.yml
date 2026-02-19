@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: urlhaus_events
+        columns:
+          - name: event_id
+            tests:
+              - not_null
+              - unique
+          - name: ingested_at
+            tests:
+              - not_null
+          - name: source
+            tests:
+              - not_null
+
