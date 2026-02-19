@@ -1,4 +1,35 @@
+# Environment files
 .env
+.env.*
+
+# macOS
 .DS_Store
+
+# SSH keys (any name)
+*.pem
+*.key
+*.pub
+id_rsa
+id_rsa.pub
+id_ed25519
+id_ed25519.pub
 githubkey
 githubkey.pub
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# dbt
+dbt/target/
+dbt/logs/
+
+# Docker
+*.log
+
+# IDE
+.vscode/
+.idea/
+
