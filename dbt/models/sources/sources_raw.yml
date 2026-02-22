@@ -5,6 +5,10 @@ sources:
     schema: raw
     tables:
       - name: urlhaus_events
+        loaded_at_field: ingested_at
+        freshness:
+          warn_after: {count: 20, period: minute}
+          error_after: {count: 60, period: minute}
         columns:
           - name: event_id
             tests:
@@ -16,4 +20,14 @@ sources:
           - name: source
             tests:
               - not_null
-
+              - accepted_values:
+                  values: ["urlhaus"]
+          - name: _kafka_topic
+            tests:
+              - not_null
+          - name: _kafka_partition
+            tests:
+              - not_null
+          - name: _kafka_offset
+            tests:
+              - not_null

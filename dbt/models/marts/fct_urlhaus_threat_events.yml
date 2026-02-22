@@ -7,10 +7,17 @@ models:
         tests:
           - not_null
           - unique
+      - name: event_time
+        tests:
+          - not_null
       - name: ingested_at
         tests:
           - not_null
+      - name: source
+        tests:
+          - not_null
+          - accepted_values:
+              values: ["urlhaus"]
       - name: url
         tests:
           - not_null
-

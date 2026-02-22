@@ -21,6 +21,8 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+.venv/
+venv/
 
 # dbt
 dbt/target/
@@ -28,8 +30,8 @@ dbt/logs/
 
 # Docker
 *.log
+artifacts/p3_runs/
 
 # IDE
 .vscode/
 .idea/
-

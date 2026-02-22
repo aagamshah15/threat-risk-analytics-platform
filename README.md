@@ -3,7 +3,7 @@
 
 This project demonstrates a **local-first, production-style data engineering architecture** for cyber threat analytics.
 
-It evolves from a pure **batch ELT pipeline (Phase 1)** into a **hybrid batch + streaming platform (Phase 2)** — all running locally with Docker and $0 cloud cost.
+It evolves from a pure **batch ELT pipeline (Phase 1)** into a **hybrid batch + streaming platform (Phase 2)**, then **orchestration + observability (Phase 3)**, and finally **serving + dashboard + reliability hardening (Phase 4)** — all running locally with Docker and $0 cloud cost.
 
 ---
 
@@ -56,6 +56,8 @@ All locally. No cloud services.
 - **Postgres** – warehouse (raw, staging, marts)  
 - **dbt Core** – transformations, testing, documentation  
 - **Make** – one-command execution  
+- **FastAPI** – serving layer for curated marts  
+- **Streamlit** – recruiter-facing local dashboard  
 
 ---
 
@@ -125,7 +127,44 @@ dbt incremental model uses a configurable lookback window.
 - dbt source tests on raw streaming table  
 - Incremental model tests (`unique`, `not_null`)  
 - Kafka metadata captured in raw table  
-- MinIO bronze preserves immutable history  
+- MinIO bronze preserves immutable history
+
+---
+
+# 🛠 Phase 3 — Orchestration + Observability
+
+Phase 3 adds **Prefect** as the local-first orchestrator.
+
+Orchestrated flow tasks:
+
+1. Run Phase 1 batch ELT (`elt/run.py`) for `run_date` or backfill date range  
+2. Streaming health checks (topic exists, consumer lag, ingest freshness)  
+3. `dbt build` + `dbt test`  
+4. Observability artifacts under `artifacts/p3_runs/<timestamp>_<flow_run_id>/`
+
+New observability checks include:
+
+- dbt test pass/fail summary from `dbt/target/run_results.json`  
+- streaming latency checks from `raw.urlhaus_events.ingested_at`  
+- row-count guardrails for batch and stream datasets  
+
+---
+
+# 🧭 Phase 4 — Consumption + Reliability Hardening
+
+Phase 4 adds:
+
+- **FastAPI serving layer** (`services/api`) exposing curated threat/risk marts
+- **Streamlit dashboard** (`services/dashboard`) for recruiter demos
+- **Stronger data contracts** (dbt source freshness + streaming integrity tests)
+- **CI quality gates** (lint + tests + dbt checks)
+
+New key endpoints:
+
+- `/health`
+- `/v1/pipeline/summary`
+- `/v1/trends/threat-events`
+- `/v1/risk/kev-summary`
 
 ---
 
@@ -163,6 +202,67 @@ make down-p2
 make reset-p2
 ```
 
+### Phase 3 (Orchestration + Observability)
+
+**Start full stack (Phase 1 + 2 + 3):**
+```bash
+make up-p3
+```
+
+**Optional hello flow smoke test:**
+```bash
+make run-p3-hello
+```
+
+**Run full Prefect pipeline:**
+```bash
+make run-p3
+```
+
+**Run backfill:**
+```bash
+make run-p3-backfill BACKFILL_START=2026-02-15 BACKFILL_END=2026-02-17
+```
+
+**Verify services and artifacts:**
+```bash
+make verify-p3
+```
+
+**Prefect UI:**
+```text
+http://localhost:4200
+```
+
+**Logs and shutdown:**
+```bash
+make logs-p3
+make down-p3
+```
+
+### Phase 4 (Consumption + Reliability Hardening)
+
+**One command full demo stack (Phases 1-4):**
+```bash
+make demo-p4
+```
+
+**Key UIs:**
+```text
+Prefect:   http://localhost:4200
+API Docs:  http://localhost:8000/docs
+Dashboard: http://localhost:8501
+```
+
+**Phase 4 utilities:**
+```bash
+make up-p4
+make run-p4
+make verify-p4
+make logs-p4
+make down-p4
+```
+
 ---
 
 ## 📘 dbt Documentation
@@ -182,3 +282,11 @@ make docs-serve
 ![dbt Model](docs/screenshots/dbt-docs-model.png)
 
 ![dbt Lineage](docs/screenshots/dbt-docs-lineage.png)
+
+---
+
+## 📚 Phase 4 Docs
+
+- `docs/PHASE4_ARCHITECTURE.md`
+- `docs/PHASE4_DEMO.md`
+- `docs/PHASE4_TROUBLESHOOTING.md`

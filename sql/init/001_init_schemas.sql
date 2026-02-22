@@ -33,3 +33,23 @@ CREATE TABLE IF NOT EXISTS raw.urlhaus_recent (
   run_date DATE
 );
 
+CREATE TABLE IF NOT EXISTS raw.urlhaus_events (
+  event_id TEXT PRIMARY KEY,
+  event_time TIMESTAMPTZ,
+  ingested_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  source TEXT NOT NULL,
+  url TEXT,
+  feed TEXT,
+  payload JSONB,
+  _consumer_ingested_at TIMESTAMPTZ,
+  _kafka_topic TEXT,
+  _kafka_partition INTEGER,
+  _kafka_offset BIGINT,
+  inserted_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+CREATE INDEX IF NOT EXISTS idx_raw_urlhaus_events_ingested_at
+  ON raw.urlhaus_events (ingested_at);
+
+CREATE INDEX IF NOT EXISTS idx_raw_urlhaus_events_event_time
+  ON raw.urlhaus_events (event_time);
