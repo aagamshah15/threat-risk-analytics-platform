@@ -69,6 +69,7 @@ jobs:
       - name: dbt build + freshness + tests
         run: |
           cd dbt
+          export DBT_PROFILES_DIR=.
           dbt build
           dbt source freshness --select source:raw.urlhaus_events
           dbt test --select source:raw.urlhaus_events fct_urlhaus_threat_events
